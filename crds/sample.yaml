@@ -1,0 +1,23 @@
+apiVersion: com.redhat.ecosystem.sample/v1
+kind: RequestState
+metadata:
+  name: example
+  namespace: default
+spec:
+  request-uid: aaa-bbb-ccc
+  job: JOB2
+  state: COMPLETED
+status:
+  history:
+    - job: JOB1
+      state: STARTED
+      timestamp: t0
+    - job: JOB1
+      state: COMPLETED
+      timestamp: t1
+    - job: JOB2
+      state: STARTED
+      timestamp: t2
+    - job: JOB2
+      state: COMPLETED
+      timestamp: t3
